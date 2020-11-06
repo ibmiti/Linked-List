@@ -56,7 +56,7 @@ class LinkedList {
             value: value,
             next : null
         };
-        const leader = this.traverseToIndex(index - 1)
+        const leader = this.traverseToIndex(index - 1);
         const holdingPointer = leader.next;
         leader.next = newNode;
         newNode.next = holdingPointer;
@@ -73,12 +73,22 @@ class LinkedList {
         }
         return currentNode;
     }
+    // remove at index of given
+    remove(index){
+        // check the params for ( pos num , is index given more than length of list )
+        if (index >= this.length){
+            // just add value to end of the list
+            return this.append(value)
+        }
+        const leader = this.traverseToIndex(index - 1);
+        // get reference to node we want to unwanted node
+        const unwantedNode = leader.next;
+        leader.next = unwantedNode.next;
+        // decrement length of list 
+        this.length--;
+        return this.printList();
+    }
 }
-
-// if (index === 0) {
-//     this.prepend(value);
-//     return this.printList();
-//   }
 
 //initiate new copy of Linkedlist
 const myLinkedList = new LinkedList(10);
@@ -87,3 +97,4 @@ myLinkedList.append(20);
 myLinkedList.prepend(1);
 myLinkedList.printList();
 myLinkedList.insert(2,10);
+myLinkedList.remove(2);
