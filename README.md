@@ -41,5 +41,27 @@ A:
     
     [head:A|data ][next]-->[B ][]-->[c ][]-->[D ][]-->null|tail
 
+Q: What commonality can be found between linkedlist and arrays?:
+A: you must move through both, in linkedlist this is referred to as 'Traversal' within arrays this is referred to as 'Iteration' 
 
-            
+Q: How would you traverse an linked-list?:
+A: While loops - for we do not when a linked-list will end
+    so while pointer is not null/tails then traverse
+
+Q: What commonality can be struct betweenlinked-list,object(hash)?:
+A: the elements are stored in a more scattered way and then addressed by keys like object(hash_table) data structure, making traversing slower than a iteration through an array 
+
+Q; what is the run-time of traversing linked-list?:
+A: O(n)
+
+Q: What advantage does linked-list have over object(hash)?:
+A: there is order to link-list due to each node pointing to the next 
+( this does not apply to pythons dictionary datastructure any longer for hashtables are now ordered )
+
+Q: what are some operations that can be done on Linked-list?:
+A: 1.prepend O(1) , 2. append O(1) , 3. lookup O(n)
+   4. insert O)(n), 5. delete O(n)
+
+ 
+
+
