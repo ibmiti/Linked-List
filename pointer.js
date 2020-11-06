@@ -20,5 +20,5 @@ obj1.a = 'foo';
 // this will delete the original object however the pointer will still hold the value it once pointed to
 delete obj1
 
- console.log('1',obj1); // undefined
+console.log('1',obj1); // undefined
 console.log('2', obj2); // true
