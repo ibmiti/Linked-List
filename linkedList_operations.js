@@ -88,6 +88,34 @@ class LinkedList {
         this.length--;
         return this.printList();
     }
+    // reversing linked list
+    reverse(){
+        if (!this.head.next){
+            return this.head;
+        }
+        // creating references to head
+        let first = this.head;
+        // the tail should become head
+        this.tail = this.head; 
+        let second = first.next;
+        // while second is not null
+        // this loop will switch the values until null
+        while(second){
+            // the reversing starts here:
+            // this temp will hold the element after second
+            const temp = second.next;
+            // now second will point backward // to switch them
+            second.next = first;
+            // same
+            first = second;
+            second = temp;
+        }
+        // first point to null
+        this.head.next = null;
+        // last element is now the first element
+        this.head = first;
+        return this.printList();
+    }
 }
 
 //initiate new copy of Linkedlist
@@ -98,3 +126,5 @@ myLinkedList.prepend(1);
 myLinkedList.printList();
 myLinkedList.insert(2,10);
 myLinkedList.remove(2);
+// reverse list
+myLinkedList.reverse();
